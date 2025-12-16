@@ -3,7 +3,7 @@
 ## Overview
 This repository demonstrates the implementation of two critical Layer 2 security features on Cisco switches: Dynamic ARP Inspection (DAI) and IP Source Guard (IPSG). These features work together with DHCP Snooping to prevent ARP spoofing, IP spoofing, and man-in-the-middle attacks in switched networks.
 
-![Network Topology](assets/dai-ipsg-topology.png)
+![Network Topology](assets/topology.jpeg)
 
 ## What is Dynamic ARP Inspection (DAI)?
 
@@ -63,7 +63,7 @@ Without DHCP Snooping, DAI and IPSG will not function properly.
 
 ## Configuration Overview
 
-![Configuration Commands](assets/config-commands.png)
+![Configuration Commands](assets/switchconf)
 
 ### Trust State Configuration
 
@@ -117,7 +117,7 @@ Switch(config)# interface range fa0/2-4, fa0/6-20
 Switch(config-if-range)# ip arp inspection limit rate 15
 ```
 
-![DAI Configuration](assets/dai-config.png)
+![DAI Configuration](assets/switchconf1.jpeg)
 
 ### Step 3: Enable IP Source Guard
 
@@ -152,7 +152,7 @@ Switch# show ip verify source
 Switch# show ip dhcp snooping binding
 ```
 
-![Verification Output](assets/verification.png)
+![Verification Output](assets/ipverify.jpeg)
 
 ## Complete Configuration Example
 
